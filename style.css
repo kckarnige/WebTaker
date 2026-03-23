@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  text-align: center;
+}
+body #bg {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: display;
+  height: 100vh;
+}
+body #bgbg {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) scale(1.1);
+  display: block;
+  height: 100vh;
+  filter: blur(25px);
+}/*# sourceMappingURL=style.css.map */
