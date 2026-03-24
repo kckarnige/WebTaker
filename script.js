@@ -34,12 +34,12 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
 
       vid.setAttribute("src", json.post_url)
       vid.setAttribute("id", "bg")
-      document.body.append(vid)
+      document.getElementById("mediaContainer").append(vid)
     } else {
       var img = document.createElement("img")
       img.setAttribute("src", json.post_url)
       img.setAttribute("id", "bg")
-      document.body.append(img)
+      document.getElementById("mediaContainer").append(img)
     }
     return json;
   })
@@ -52,6 +52,7 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
     })
     .then((res) => res.json())
     .then((e6json) => {
-      console.log(e6json.post.file.ext)
+      console.log(e6json.post.id)
+      document.getElementById("mediaContainer").setAttribute("href",`https://e694.net/posts/${e6json.post.id}`)
     })
   })
