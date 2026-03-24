@@ -52,7 +52,7 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
     })
     .then((res) => res.json())
     .then((e6json) => {
-      console.log(e6json.post.id)
-      document.getElementById("mediaContainer").setAttribute("href",`https://e694.net/posts/${e6json.post.id}`)
+      console.log(`https://e694.net/posts/${e6json.post.id}`)
+      document.getElementById("mediaContainer").setAttribute("href","#")
     })
   })

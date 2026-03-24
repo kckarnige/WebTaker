@@ -24,6 +24,11 @@ body {
         filter: blur(25px);
     }
 
+    select {
+        position: fixed;
+        z-index: 999;
+    }
+
     .button {
         background: #ffb300;
     }

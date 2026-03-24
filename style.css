@@ -23,6 +23,10 @@ body.fancyBlur > #bgbg {
   height: 100vh;
   filter: blur(25px);
 }
+body select {
+  position: fixed;
+  z-index: 999;
+}
 body .button {
   background: #ffb300;
 }/*# sourceMappingURL=style.css.map */
