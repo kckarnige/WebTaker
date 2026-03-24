@@ -1,10 +1,12 @@
 body {
     margin: 0;
     overflow: hidden;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
     background: #212121;
     text-align: center;
 
-    > a > #bg {
+    >a>#bg {
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -12,10 +14,12 @@ body {
         height: 100vh;
         z-index: 99;
     }
-    > #bgbg {
+
+    >#bgbg {
         display: none;
     }
-    &.fancyBlur > #bgbg {
+
+    &.fancyBlur>#bgbg {
         position: fixed;
         left: 50%;
         transform: translateX(-50%) scale(1.1);
@@ -24,12 +28,72 @@ body {
         filter: blur(25px);
     }
 
-    select {
+    >#freakContainer {
+        bottom: 0;
+        right: 0;
+        margin: 8px;
         position: fixed;
         z-index: 999;
-    }
+        transition: 0.1s;
+        opacity: 0.5;
+        &:hover {
+            transition: 0.1s;
+            opacity: 1;
+        }
 
-    .button {
-        background: #ffb300;
+        p {
+            font-style: italic;
+            opacity: 0.5;
+            user-select: none;
+        }
+        #freakometer {
+            padding: 4px;
+            border-radius: 5px;
+            color: #212121;
+            background: #ffb300;
+            display: block;
+            outline: none;
+            border: none;
+            width: 256px;
+            height: 26px;
+            &:hover {
+                background: #ffdd33;
+            }
+        }
+
+        #freakSpeak {
+            right: 0;
+            padding: 4px;
+            border-radius: 5px;
+            color: #212121;
+            background: #ffb300;
+            display: block;
+            outline: none;
+            border: none;
+            width: 248px;
+            height: 256px;
+            margin-top: 8px;
+            resize: none;
+            &:hover {
+                background: #ffdd33;
+            }
+        }
+
+        #freakSubmitter {
+            padding: 4px;
+            border-radius: 5px;
+            color: #212121;
+            background: #ffb300;
+            display: block;
+            outline: none;
+            border: none;
+            width: 256px;
+            height: 26px;
+            margin-top: 8px;
+            cursor: pointer;
+            &:hover {
+                background: #ffdd33;
+            }
+        }
     }
 }

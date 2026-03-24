@@ -1,13 +1,12 @@
 var config = (q) => { return new URLSearchParams(location.search).get(q) }
 
-var id = config("id")
 // Use my freaky ahh ID if nothing is queried
 
 if (config("blurBg") != "false") {
   document.body.classList.add("fancyBlur")
 }
 
-fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
+fetch(`https://walltaker.joi.how/api/links/${config("id")}.json`, {
   method: "GET",
   headers: {
     Accept: "application/json",
@@ -15,7 +14,7 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
 })
   .then((res) => res.json())
   .then((json) => {
-
+    document.getElementById("selfExplanitory").innerText = `${config("id")} (${json.username})`;
     var background = document.createElement("img")
     background.setAttribute("src", json.post_thumbnail_url)
     background.setAttribute("id", "bgbg")
@@ -52,7 +51,6 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
     })
     .then((res) => res.json())
     .then((e6json) => {
-      console.log(`https://e694.net/posts/${e6json.post.id}`)
-      document.getElementById("mediaContainer").setAttribute("href","#")
+      document.getElementById("mediaContainer").setAttribute("href",`https://e694.net/posts/${e6json.post.id}`)
     })
   })

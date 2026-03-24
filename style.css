@@ -1,6 +1,8 @@
 body {
   margin: 0;
   overflow: hidden;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
   background: #212121;
   text-align: center;
 }
@@ -23,10 +25,70 @@ body.fancyBlur > #bgbg {
   height: 100vh;
   filter: blur(25px);
 }
-body select {
+body > #freakContainer {
+  bottom: 0;
+  right: 0;
+  margin: 8px;
   position: fixed;
   z-index: 999;
+  transition: 0.1s;
+  opacity: 0.5;
 }
-body .button {
+body > #freakContainer:hover {
+  transition: 0.1s;
+  opacity: 1;
+}
+body > #freakContainer p {
+  font-style: italic;
+  opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body > #freakContainer #freakometer {
+  padding: 4px;
+  border-radius: 5px;
+  color: #212121;
   background: #ffb300;
+  display: block;
+  outline: none;
+  border: none;
+  width: 256px;
+  height: 26px;
+}
+body > #freakContainer #freakometer:hover {
+  background: #ffdd33;
+}
+body > #freakContainer #freakSpeak {
+  right: 0;
+  padding: 4px;
+  border-radius: 5px;
+  color: #212121;
+  background: #ffb300;
+  display: block;
+  outline: none;
+  border: none;
+  width: 248px;
+  height: 256px;
+  margin-top: 8px;
+  resize: none;
+}
+body > #freakContainer #freakSpeak:hover {
+  background: #ffdd33;
+}
+body > #freakContainer #freakSubmitter {
+  padding: 4px;
+  border-radius: 5px;
+  color: #212121;
+  background: #ffb300;
+  display: block;
+  outline: none;
+  border: none;
+  width: 256px;
+  height: 26px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+body > #freakContainer #freakSubmitter:hover {
+  background: #ffdd33;
 }/*# sourceMappingURL=style.css.map */

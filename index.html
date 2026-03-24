@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Walltaker HTML Edition</title>
 </head>
 
 <body>
-    <select name="response" id="freakometer">
-        <option value="came">I came to this</option>
-        <option value="horny">I need this</option>
-        <option value="disgust">I hate this</option>
-    </select>
-    <a id="mediaContainer"></a>
+    <div id="freakContainer">
+        <p>Submitting for: <span id="selfExplanitory"></span></p>
+        <select name="response" id="freakometer">
+            <option value="came">I came to this</option>
+            <option value="horny">I need this</option>
+            <option value="disgust">I hate this</option>
+        </select>
+        <textarea id="freakSpeak" placeholder="Smother me please..."></textarea>
+        <button id="freakSubmitter">Submit</a>
+    </div>
+    <a id="mediaContainer" target="_blank"></a>
     <script src="./loadContent.js"></script>
     <script src="./requestinator.js"></script>
 </body>
