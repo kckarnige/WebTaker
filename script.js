@@ -52,6 +52,6 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
     })
     .then((res) => res.json())
     .then((e6json) => {
-      console.log(e6json.file.ext)
+      console.log(e6json.post.file.ext)
     })
   })
