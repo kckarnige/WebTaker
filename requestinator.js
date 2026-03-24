@@ -2,7 +2,7 @@ var config = (q) => { return new URLSearchParams(location.search).get(q) }
 
 async function postData() {
   try {
-    const response = await fetch(`https://walltaker.joi.how/api/links${config("id")}/response.json`, {
+    const response = await fetch(`https://walltaker.joi.how/api/links/${config("id")}/response.json`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
