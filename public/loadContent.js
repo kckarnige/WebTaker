@@ -1,9 +1,14 @@
 var config = (q) => { return new URLSearchParams(location.search).get(q) }
-
-// Use my freaky ahh ID if nothing is queried
+var noClick = false;
 
 if (config("blurBg") != "false") {
   document.body.classList.add("fancyBlur")
+}
+
+
+if (config("noClick") != "false") {
+  document.getElementById("freakyContainer").remove()
+  document.body.style.pointerEvents = "none";
 }
 
 fetch(`https://walltaker.joi.how/api/links/${config("id")}.json`, {
