@@ -7,7 +7,7 @@ if (config("blurBg") != "false") {
 
 
 if (config("noClick") != "false") {
-  document.getElementById("freakyContainer").style.display = "none";
+  document.getElementById("freakContainer").style.display = "none";
   document.body.style.pointerEvents = "none";
 }
 
