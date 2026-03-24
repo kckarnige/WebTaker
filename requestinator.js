@@ -3,7 +3,7 @@ var config = (q) => { return new URLSearchParams(location.search).get(q) }
 if ((config("api_key") == undefined || null || "") || (config("id") == undefined || null || "")) {
   id = prompt("Please enter your Walltaker ID")
   key = prompt("Please enter your Walltaker API Key")
-  location.href = (location.host+ location.pathname+ "?api_key="+ key+ "&id="+ id) 
+  location.href = (location.protocol+ location.pathname+ "?api_key="+ key+ "&id="+ id).toString()
 }
 
 async function postData() {
