@@ -1,23 +1,29 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: #000;
+    background: #212121;
     text-align: center;
 
-    #bg {
+    > #bg {
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
         display: display;
         height: 100vh;
     }
-
-    #bgbg {
+    > #bgbg {
+        display: none;
+    }
+    &.fancyBlur > #bgbg {
         position: fixed;
         left: 50%;
         transform: translateX(-50%) scale(1.1);
         display: block;
         height: 100vh;
         filter: blur(25px);
+    }
+
+    .button {
+        background: #ffb300;
     }
 }
