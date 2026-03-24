@@ -26,4 +26,5 @@ async function postData() {
   }
 }
 
-document.getElementById("mediaContainer").onclick(() => {postData()})
+document.getElementById("mediaContainer").addEventListener("click", () => {postData()})
+
