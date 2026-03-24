@@ -1,6 +1,6 @@
 var config = (q) => { return new URLSearchParams(location.search).get(q) }
 
-var id = config("id") ?? "51359"
+var id = config("id")
 // Use my freaky ahh ID if nothing is queried
 
 if (config("blurBg") != "false") {
