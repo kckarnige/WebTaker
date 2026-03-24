@@ -7,11 +7,13 @@ async function postData() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: {
-        "api_key": config("api_key"),
-        "type": document.getElementById("freakometer").value,
-        "text": "This is a placeholder until I get text working properly!"
-      }
+      body: JSON.stringify(
+        {
+          "api_key": config("api_key"),
+          "type": document.getElementById("freakometer").value,
+          "text": "This is a placeholder until I get text working properly!"
+        }
+      )
     });
 
     if (!response.ok) {
@@ -26,5 +28,5 @@ async function postData() {
   }
 }
 
-document.getElementById("mediaContainer").addEventListener("click", () => {postData()})
+document.getElementById("mediaContainer").addEventListener("click", () => { postData() })
 
