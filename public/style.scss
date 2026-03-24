@@ -41,7 +41,9 @@ body {
             opacity: 1;
         }
 
-        p {
+        a>p {
+            color: #fff;
+            text-decoration: none;
             font-style: italic;
             opacity: 0.5;
             user-select: none;

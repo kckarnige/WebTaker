@@ -52,5 +52,6 @@ fetch(`https://walltaker.joi.how/api/links/${config("id")}.json`, {
     .then((res) => res.json())
     .then((e6json) => {
       document.getElementById("mediaContainer").setAttribute("href",`https://e694.net/posts/${e6json.post.id}`)
+      document.getElementById("freakInQuestion").setAttribute("href",`https://walltaker.joi.how/users/${json.username}`)
     })
   })

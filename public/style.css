@@ -38,7 +38,9 @@ body > #freakContainer:hover {
   transition: 0.1s;
   opacity: 1;
 }
-body > #freakContainer p {
+body > #freakContainer a > p {
+  color: #fff;
+  text-decoration: none;
   font-style: italic;
   opacity: 0.5;
   -webkit-user-select: none;
