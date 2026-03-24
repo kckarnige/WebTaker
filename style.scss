@@ -4,12 +4,13 @@ body {
     background: #212121;
     text-align: center;
 
-    > #bg {
+    > a > #bg {
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
         display: display;
         height: 100vh;
+        z-index: 99;
     }
     > #bgbg {
         display: none;
