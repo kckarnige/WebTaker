@@ -41,4 +41,17 @@ fetch(`https://walltaker.joi.how/api/links/${id}.json`, {
       img.setAttribute("id", "bg")
       document.body.append(img)
     }
+    return json;
+  })
+  .then((json) => {
+    fetch(`https://e694.net/posts/${json.post_url.split("/").at(-1).split(".")[0]}.json`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    })
+    .then((res) => res.json())
+    .then((e6json) => {
+      console.log(e6json.file.ext)
+    })
   })
