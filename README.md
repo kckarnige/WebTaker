@@ -1,2 +1,2 @@
-# WalltakerWebClient
-A simple JavaScript example for Walltaker.
+# WebTaker
+A simple web-based example for Walltaker.
